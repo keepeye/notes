@@ -1,6 +1,18 @@
 从零开始学习node和express
 ---------------------------
 
+### npm安装包
+
+首先，使用淘宝的npm源加速。
+
+    npm install 包名 --save
+
+在当前项目中安装指定包，并保存配置到packagist.json
+
+    npm install 包名 -g
+    
+安装到全局，一般用来安装命令行工具。
+
 ### underscore
 
 当我浏览一遍express入门教程后，兴冲冲的跑去开始写代码，碰到第一个坑：如何做json合并。
