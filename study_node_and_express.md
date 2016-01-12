@@ -11,14 +11,14 @@ jquery中有$.extend，但express和node都没有内置相关的工具包。
 
 安装：
   
-  npm install underscore  --save
+    npm install underscore  --save
   
 使用：
 
-  var _ = require('underscore');
-  var json = _.extend({"a":1},{"b":2});
-  console.log(json);
-  //得到 {"a":1,"b":2}
+    var _ = require('underscore');
+    var json = _.extend({"a":1},{"b":2});
+    console.log(json);
+    //得到 {"a":1,"b":2}
   
   
 ### node-dev
@@ -27,11 +27,11 @@ jquery中有$.extend，但express和node都没有内置相关的工具包。
 
 安装 ： 
 
-  npm install node-dev -g
+    npm install node-dev -g
 
 使用：
 express根目录下执行 
 
-  node-dev ./bin/www
+    node-dev ./bin/www
   
 `npm start` 可以暂时弃用了.
