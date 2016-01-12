@@ -13,7 +13,30 @@
 
     npm install 包名 -g
     
+### 关于require
 
+node中使用 `require()` 来加载模块，模块加载分为两种方式:
+
+1.从node_modules中加载，即通过npm安装的模块。
+
+        var foo = require('foo')
+      
+2.从自定义路径中加载
+
+        var foo = reuqire('./foo')
+        
+此种方式会相对于当前脚本所在目录，依次寻找 
+    
+- ./foo.js
+- ./foo.json
+- ./foo.node
+- ./foo/package.json
+- ./foo/index.js
+- ./foo/index.json
+- ./foo/index.node
+
+
+模块加载一次后将被缓存，多次require同一个模块不会重复运行模块初始化脚本，即单例模式。
 
 ### underscore
 
