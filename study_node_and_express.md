@@ -85,5 +85,5 @@ fs模块方法所传入的path路径，除非是绝对路径(以 '/' 开头的),
 
     fs.exists(__dirname + '/app.js')
     
-是不是有点像php里的 __DIR__ ？
+是不是有点像php里的 `__DIR__` ？
 
