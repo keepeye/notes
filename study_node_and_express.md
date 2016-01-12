@@ -3,15 +3,17 @@
 
 ### npm安装包
 
-首先，使用淘宝的npm源加速。
-
-    npm install 包名 --save
+首先，使用淘宝的npm源加速 http://npm.taobao.org/ 
 
 在当前项目中安装指定包，并保存配置到packagist.json
 
+    npm install 包名 --save
+
+安装到全局，一般用来安装命令行工具。
+
     npm install 包名 -g
     
-安装到全局，一般用来安装命令行工具。
+
 
 ### underscore
 
