@@ -35,3 +35,18 @@ express根目录下执行
     node-dev ./bin/www
   
 `npm start` 可以暂时弃用了.
+
+### 关于fs模块路径
+
+fs模块方法所传入的path路径，除非是绝对路径(以 '/' 开头的),其他的都是相对于执行根目录。
+
+举个例子
+
+    fs.exists('config/app.js'); 
+    
+是取的  `/path/to/project/config/app.js` , 如果要相对于当前目录，有一个变量 `__dirname`
+
+    fs.exists(__dirname + '/app.js')
+    
+是不是有点像php里的 __DIR__ ？
+
