@@ -87,3 +87,21 @@ fs模块方法所传入的path路径，除非是绝对路径(以 '/' 开头的),
     
 是不是有点像php里的 `__DIR__` ？
 
+
+### 关于重定向
+
+今天写了一段代码，然后发现报错 `Can't set headers after they are sent`
+
+    if (!req.session.adminUid) {
+      res.redirect('/admin/auth/login');
+    }
+    next();
+    
+本来我以为redirect内部调用了 response.end() ，之后整个请求流程就终止了，想错了。实际上代码还会继续执行下去，next() 被执行了，然而因为response的大门已经被关上，之后所有res写入都会报错。
+
+改为
+
+    if (!req.session.adminUid) {
+      return res.redirect('/admin/auth/login');
+    }
+    next();
